@@ -1,0 +1,10 @@
+
+@import "./vars";
+body{
+    div{
+        color: $base-color;
+        &__or_not_body{
+            font-size: 12px;
+        }
+    }
+}
