@@ -3,8 +3,9 @@
 body{
     div{
         color: $base-color;
-        &__or_not_body{
-            font-size: 12px;
+        background-color: $next-color;
+        p{
+            font-size: 110px;
         }
     }
 }
