@@ -1,5 +1,8 @@
+body {
+  box-sizing: border-box; }
+
 body div {
-  color: gray;
+  color: yellow;
   background-color: green; }
   body div p {
-    font-size: 110px; }
+    font-size: 10px; }

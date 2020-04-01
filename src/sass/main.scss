@@ -1,11 +1,11 @@
-
-@import "./vars";
+@import "modules/header";
+@import "vars";
 body{
     div{
         color: $base-color;
         background-color: $next-color;
         p{
-            font-size: 110px;
+            font-size: 10px;
         }
     }
-}
+}w
