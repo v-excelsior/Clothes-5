@@ -1,8 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+ul {
+  list-style: none; }
+
 body {
   box-sizing: border-box; }
 
-body div {
-  color: yellow;
-  background-color: green; }
-  body div p {
-    font-size: 10px; }
+body {
+  color: green; }

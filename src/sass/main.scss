@@ -1,11 +1,6 @@
-@import "modules/header";
+@import "normalize";
 @import "vars";
-body{
-    div{
-        color: $base-color;
-        background-color: $next-color;
-        p{
-            font-size: 10px;
-        }
-    }
-}w
+@import "modules/header";
+body {
+    color: green;
+}
