@@ -2,27 +2,34 @@
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/main.css")
         title Closes - 5
     body
         header.header
-            nav
-                ul(class='header__list header__list_sections')
+            nav.header__nav
+                span.header__logo Mon`sa
+                ul(class='header__list header__sections')
                     li
-                        a.header__list-item(href="#") Home
+                        a.header__sections-item(href="#") Home
                     li
-                        a.header__list-item(href="#") Shop
+                        a.header__sections-item(href="#") Shop
                     li
-                        a.header__list-item(href="#") Pages
+                        a.header__sections-item(href="#") Pages
                     li
-                        a.header__list-item(href="#") Blog
+                        a.header__sections-item(href="#") Blog
                     li
-                        a.header__list-item(href="#") Lookbook
-                ul(class='header__list header__list_')
+                        a.header__sections-item(href="#") Lookbook
+                ul(class='header__list header__right')
                     li
-                        a.header__list-item(href="#") 
-                        img
+                        a.header__right-item(href="#") 
+                            svg.header-icon
+                                use(xlink:href="img/footer-right.svg#account")
                     li
-                        a.header__list-item(href="#")
+                        a.header__right-item(href="#") 
+                            svg.header-icon
+                                use(xlink:href="img/footer-right.svg#search")
                     li
-                        a.header__list-item(href="#")
+                        a.header__right-item(href="#") 
+                            svg.header-icon
+                                use(xlink:href="img/footer-right.svg#shopping-bag")

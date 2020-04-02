@@ -6,14 +6,14 @@ var pug = require('gulp-pug');
 gulp.task('sass', function() {
     return gulp.src('./src/sass/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./build/css'))
+        .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.stream());
 });
 
 gulp.task('pug', function() {
     return gulp.src("./src/pug/*.pug")
-        .pipe(pug({ pretty: true }))
-        .pipe(gulp.dest("./"))
+        .pipe(pug({ pretty: true }).on('error', pug.logError))
+        .pipe(gulp.dest("./dist"))
         .pipe(browserSync.stream());
 });
 
@@ -21,7 +21,7 @@ gulp.task('pug', function() {
 gulp.task('watchAll', function() {
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./dist"
         }
     });
     gulp.watch('./src/sass/*.scss', gulp.series('sass'));

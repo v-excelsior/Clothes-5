@@ -1,6 +1,11 @@
-@import "normalize";
 @import "vars";
-@import "modules/header";
-body {
-    color: green;
+@import "mixins";
+@import "fonts";
+@import "normalize";
+@import "modules/modules-list";
+
+.header__logo {
+  background-color: yellow;
+  font-size:90px;
+  font-family: "Montserrat-Thin";
 }
