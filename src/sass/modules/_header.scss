@@ -1,10 +1,37 @@
-.header{
-    &__nav{
-        display:flex;
+.header {
+    font-family: "Montserrat-SemiBold";
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-    &__logo{
-        color:green;
-        font-size:12px;
+    &__logo {
+        color: $near-black;
+        font-size: 45px;
+    }
+    &__list {
+        display: flex;
+    }
+    &__sections {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        &-item {
+            margin: 0 20px;
+        }
+    }
+    &__right {
+        &-item {
+            margin: 0 15px;
+        }
+    }
+    &-icon {
+        width: 25px;
+        height: 25px;
+    }
+    @include screen(custom,max,1170px) {
+        &__sections {  
+            display: none;
+        }
     }
 }
 

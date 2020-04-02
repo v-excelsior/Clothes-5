@@ -7,29 +7,30 @@ html(lang="en")
         title Closes - 5
     body
         header.header
-            nav.header__nav
-                span.header__logo Mon`sa
-                ul(class='header__list header__sections')
-                    li
-                        a.header__sections-item(href="#") Home
-                    li
-                        a.header__sections-item(href="#") Shop
-                    li
-                        a.header__sections-item(href="#") Pages
-                    li
-                        a.header__sections-item(href="#") Blog
-                    li
-                        a.header__sections-item(href="#") Lookbook
-                ul(class='header__list header__right')
-                    li
-                        a.header__right-item(href="#") 
-                            svg.header-icon
-                                use(xlink:href="img/footer-right.svg#account")
-                    li
-                        a.header__right-item(href="#") 
-                            svg.header-icon
-                                use(xlink:href="img/footer-right.svg#search")
-                    li
-                        a.header__right-item(href="#") 
-                            svg.header-icon
-                                use(xlink:href="img/footer-right.svg#shopping-bag")
+            div(class='container header__container')
+                nav.header__nav
+                    span.header__logo Mon'sa
+                    ul(class='header__list header__sections')
+                        li.header__sections-item
+                            a.link-active(href="#") Home
+                        li.header__sections-item
+                            a(href="#") Shop
+                        li.header__sections-item
+                            a(href="#") Pages
+                        li.header__sections-item
+                            a(href="#") Blog
+                        li.header__sections-item
+                            a(href="#") Lookbook
+                    ul(class='header__list header__right')
+                        li.header__right-item
+                            a(href="#") 
+                                svg.header-icon
+                                    use(xlink:href="img/footer-right.svg#account")
+                        li.header__right-item
+                            a(href="#") 
+                                svg.header-icon
+                                    use(xlink:href="img/footer-right.svg#search")
+                        li.header__right-item
+                            a(href="#") 
+                                svg.header-icon
+                                    use(xlink:href="img/footer-right.svg#shopping-bag")

@@ -34,14 +34,40 @@ a {
 ul {
   list-style: none; }
 
-.header__nav {
-  display: flex; }
+.container {
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 10px;
+  margin: 0 auto; }
 
-.header__logo {
-  color: green;
-  font-size: 12px; }
+.link-active:after {
+  display: block;
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: #171717; }
 
-.header__logo {
-  background-color: yellow;
-  font-size: 90px;
-  font-family: "Montserrat-Thin"; }
+.header {
+  font-family: "Montserrat-SemiBold"; }
+  .header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .header__logo {
+    color: #171717;
+    font-size: 45px; }
+  .header__list {
+    display: flex; }
+  .header__sections {
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+    .header__sections-item {
+      margin: 0 20px; }
+  .header__right-item {
+    margin: 0 15px; }
+  .header-icon {
+    width: 25px;
+    height: 25px; }
+  @media screen and (max-width: 1170px) {
+    .header__sections {
+      display: none; } }

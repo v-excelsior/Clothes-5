@@ -1,0 +1,17 @@
+@import "vars";
+.container{
+    width:100%;
+    max-width: $container-width;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.link-active{
+    &:after{
+        display: block;
+        content:'';
+        height:2px;
+        width:100%;
+        background-color: $near-black;
+    }
+}

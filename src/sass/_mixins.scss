@@ -4,3 +4,27 @@
         src: url("../" + fonts/$font-family/$font-family + "-" + $font-type + ".ttf") format("truetype");
     }
 }
+
+@mixin screen($size, $width-type, $breakpoint) {
+    @if $size == "small" {
+        @media screen and (max-width: $breakpoint-small) {
+            @content;
+        }
+    } @else if $size == "medium" {
+        @media screen and (max-width: $breakpoint-medium) {
+            @content;
+        }
+    } @else if $size == "large" {
+        @media screen and (min-width: $breakpoint-medium) {
+            @content;
+        }
+    } @else if $size == "custom" and $width-type == "min" {
+        @media screen and (max-width: $breakpoint) {
+            @content;
+        }
+    } @else if $size == "custom" and $width-type == "max" {
+        @media screen and (max-width: $breakpoint) {
+            @content;
+        }
+    }
+}
