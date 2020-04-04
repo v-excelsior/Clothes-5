@@ -22,6 +22,10 @@
   font-family: "Montserrat-Bold";
   src: url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype"); }
 
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype"); }
+
 * {
   padding: 0;
   margin: 0;
@@ -50,10 +54,10 @@ h1 {
   font-size: 50px; }
 
 h2 {
-  font-size: 42px; }
+  font-size: 60px; }
 
 h3 {
-  font-size: 30px; }
+  font-size: 40px; }
 
 h4 {
   font-size: 24px; }
@@ -89,7 +93,7 @@ h5 {
 .heading-desribe {
   display: inline-block;
   font-family: Montserrat-SemiBold;
-  font-size: 10px;
+  font-size: 15px;
   margin-bottom: 30px;
   color: #999999;
   text-transform: uppercase; }
@@ -97,12 +101,25 @@ h5 {
     .heading-desribe {
       margin-bottom: 15px; } }
 
+.card-data {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px; }
+  .card-data__name {
+    font-family: Montserrat-SemiBold;
+    margin-bottom: 10px; }
+  .card-data__price_old {
+    color: #999999;
+    text-decoration: line-through;
+    margin-right: 10px;
+    font-size: 14px; }
+
 .button {
   display: inline-block;
-  font-family: Montserrat-Regular;
+  font-family: Montserrat-Medium;
   font-size: 14px;
   text-transform: uppercase;
-  padding: 20px 40px; }
+  padding: 20px 45px; }
   .button-white {
     background-color: white;
     color: #171717; }
@@ -179,3 +196,40 @@ h5 {
   @media screen and (max-width: 767px) {
     .welcome__container {
       min-height: 400px; } }
+
+.new__container {
+  display: flex; }
+
+.new__item-about {
+  flex: 0 0 420px; }
+
+.new__heading {
+  margin: 100px 0 70px; }
+  .new__heading:after {
+    display: block;
+    content: "";
+    height: 5px;
+    width: 100px;
+    background-color: #171717;
+    margin-top: 20px; }
+
+.new__text {
+  font-family: Montserrat-SemiBold;
+  font-size: 30px;
+  margin-bottom: 50px; }
+
+.new__item-card {
+  flex: 0 1 700px;
+  position: relative; }
+
+.new__card-img {
+  width: 100%;
+  max-width: 570px;
+  object-fit: contain; }
+
+.new__card-data {
+  position: absolute;
+  max-width: 250px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); }

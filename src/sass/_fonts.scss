@@ -1,4 +1,4 @@
 @import "mixins";
-@each $type in Thin, Light, Regular, Italic, SemiBold, Bold {
+@each $type in Thin, Light, Regular, Italic, SemiBold, Bold, Medium{
     @include font-face(Montserrat, #{$type});
 }

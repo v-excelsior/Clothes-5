@@ -1,0 +1,35 @@
+.new{ 
+    &__container{
+        display: flex;
+    }
+    &__item-about{
+        flex:0 0 420px;
+    }
+    &__heading{
+
+        @include underline-decoration;
+        margin: 100px 0 70px;
+    }
+    &__text{
+        font-family: Montserrat-SemiBold;
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+// ---
+    &__item-card{
+        flex:0 1 700px;
+        position: relative;
+    }
+    &__card-img{
+        width:100%;
+        max-width: 570px;
+        object-fit: contain;
+    }
+    &__card-data{
+        position: absolute;
+        max-width: 250px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

@@ -5,7 +5,7 @@
     }
 }
 
-@mixin screen($size, $width-type:null, $cur-breakpoint:null) {
+@mixin screen($size, $width-type: null, $cur-breakpoint: null) {
     @if $size == "small" {
         @media screen and (max-width: $breakpoint-small) {
             @content;
@@ -26,6 +26,23 @@
         @media screen and (max-width: $cur-breakpoint) {
             @content;
         }
+    }
+}
+
+@mixin underline-decoration($position: null) {
+    &:after {
+        display: block;
+        content: "";
+        height: 5px;
+        width: 100px;
+        background-color: $near-black;
+        margin-top: 20px;
+    }
+    @if ($position == center) {  //доделать цетнр
+        &:after {
+            margin: 20px auto 0;
+        }
+        display: inline-block;
     }
 }
 

@@ -19,7 +19,7 @@
 .heading-desribe{
     display: inline-block;
     font-family: Montserrat-SemiBold;
-    font-size: 10px;
+    font-size: 15px;
     margin-bottom:30px;
     color: $gray;
     text-transform: uppercase;
@@ -27,13 +27,29 @@
         margin-bottom:15px;
     }
 }
-
+.card-data{
+    display: flex;
+    flex-direction: column;
+    font-size:16px;
+    &__name{
+        font-family: Montserrat-SemiBold;
+        margin-bottom: 10px;
+    }
+    &__price{
+        &_old{
+            color:$gray;
+            text-decoration: line-through;
+            margin-right:10px;
+            font-size: 14px;
+        }
+    }
+}
 .button{
     display: inline-block;
-    font-family: Montserrat-Regular;
+    font-family: Montserrat-Medium;
     font-size:14px;
     text-transform: uppercase;
-    padding: 20px 40px;
+    padding: 20px 45px;
     &-white{
         background-color: white;
         color: $near-black;
