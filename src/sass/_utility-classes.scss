@@ -15,3 +15,39 @@
         background-color: $near-black;
     }
 }
+
+.heading-desribe{
+    display: inline-block;
+    font-family: Montserrat-SemiBold;
+    font-size: 10px;
+    margin-bottom:30px;
+    color: $gray;
+    text-transform: uppercase;
+    @include screen(medium){
+        margin-bottom:15px;
+    }
+}
+
+.button{
+    display: inline-block;
+    font-family: Montserrat-Regular;
+    font-size:14px;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    &-white{
+        background-color: white;
+        color: $near-black;
+    }
+    &-black{
+        background-color: $near-black;
+        color: white;
+    }
+    &-trans{
+        color: $near-black;
+        border: 2px solid $near-black;
+    }
+    @include screen(medium){
+        font-size:12px;
+        padding: 10px 20px;
+    }
+}

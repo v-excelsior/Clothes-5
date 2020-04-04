@@ -6,31 +6,43 @@ html(lang="en")
         link(rel="stylesheet" href="css/main.css")
         title Closes - 5
     body
-        header.header
-            div(class='container header__container')
-                nav.header__nav
-                    span.header__logo Mon'sa
-                    ul(class='header__list header__sections')
-                        li.header__sections-item
-                            a.link-active(href="#") Home
-                        li.header__sections-item
-                            a(href="#") Shop
-                        li.header__sections-item
-                            a(href="#") Pages
-                        li.header__sections-item
-                            a(href="#") Blog
-                        li.header__sections-item
-                            a(href="#") Lookbook
-                    ul(class='header__list header__right')
-                        li.header__right-item
-                            a(href="#") 
-                                svg.header-icon
-                                    use(xlink:href="img/footer-right.svg#account")
-                        li.header__right-item
-                            a(href="#") 
-                                svg.header-icon
-                                    use(xlink:href="img/footer-right.svg#search")
-                        li.header__right-item
-                            a(href="#") 
-                                svg.header-icon
-                                    use(xlink:href="img/footer-right.svg#shopping-bag")
+        .page-wrapper
+            header.header
+                div(class='container header__container')
+                    nav.header__nav
+                        a(href="#")
+                            span.header__logo Mon'sa
+                        ul(class='header__list header__sections')
+                            li.header__sections-item
+                                a.link-active(href="#") Home
+                            li.header__sections-item
+                                a(href="#") Shop
+                            li.header__sections-item
+                                a(href="#") Pages
+                            li.header__sections-item
+                                a(href="#") Blog
+                            li.header__sections-item
+                                a(href="#") Lookbook
+                        ul(class='header__list header__right')
+                            li.header__right-item
+                                a(href="#") 
+                                    svg.header-icon
+                                        use(xlink:href="img/footer-right.svg#account")
+                            li.header__right-item
+                                a(href="#") 
+                                    svg.header-icon
+                                        use(xlink:href="img/footer-right.svg#search")
+                            li.header__right-item
+                                a(href="#") 
+                                    svg.header-icon
+                                        use(xlink:href="img/footer-right.svg#shopping-bag")
+            section.welcome
+                div(class='container welcome__container')
+                    span.heading-desribe extra 55% off in spring sale
+                    h2.welcome__heading Discover & Shop
+                    h2.welcome__heading The Trend Ss19
+                    a(class="button button-black welcome__button" href="#") Shop now
+            
+            section.new
+                div(class='container new__container')
+                    

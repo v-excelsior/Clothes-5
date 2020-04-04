@@ -4,11 +4,55 @@
     box-sizing: border-box;
 }
 
+body,
+html {
+    font-family: "Montserrat-Regular";
+}
 a {
     text-decoration: none;
-    color: inherit;
+    color: inherit; //???
 }
 
 ul {
     list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+    letter-spacing: 3px;
+}
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 42px;
+}
+h3 {
+    font-size: 30px;
+}
+h4 {
+    font-size: 24px; //change
+}
+h5 {
+    font-size: 18px; //change
+}
+@include screen(medium) {
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    h4 {
+        font-size: 20px; //change
+    }
+    h5 {
+        font-size: 16px; //change
+    }
 }

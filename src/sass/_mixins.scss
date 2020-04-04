@@ -5,7 +5,7 @@
     }
 }
 
-@mixin screen($size, $width-type, $breakpoint) {
+@mixin screen($size, $width-type:null, $cur-breakpoint:null) {
     @if $size == "small" {
         @media screen and (max-width: $breakpoint-small) {
             @content;
@@ -19,12 +19,19 @@
             @content;
         }
     } @else if $size == "custom" and $width-type == "min" {
-        @media screen and (max-width: $breakpoint) {
+        @media screen and (max-width: $cur-breakpoint) {
             @content;
         }
     } @else if $size == "custom" and $width-type == "max" {
-        @media screen and (max-width: $breakpoint) {
+        @media screen and (max-width: $cur-breakpoint) {
             @content;
         }
     }
 }
+
+// @mixin flex-position($direction,$justify,$align){
+//     display: flex;
+//     flex-direction: $direction;
+//     justify-content: $justify;
+//     align:$align;
+// }

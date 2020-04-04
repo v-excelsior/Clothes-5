@@ -1,0 +1,29 @@
+.welcome {
+    background: url(/img/welcome-bg.jpg) no-repeat center top/ cover;
+    &__container {
+        min-height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    &__heading {
+        text-shadow: #ececec 1px 1px 0, #ececec -1px -1px 0, #ececec -1px 1px 0, #ececec 1px -1px 0;
+    }
+    &__button {
+        margin-top: 50px;
+    }
+    @include screen(medium) {
+        &__heading {
+            font-size: 30px;
+        }
+        &__button {
+            margin-top: 20px;
+        }
+    }
+    @include screen(medium) {
+        &__container {
+            min-height: 400px;
+        }
+    }
+}
