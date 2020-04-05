@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "normalize.scss": "^0.1.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",

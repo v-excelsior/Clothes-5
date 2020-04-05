@@ -15,7 +15,7 @@
             @content;
         }
     } @else if $size == "large" {
-        @media screen and (min-width: $breakpoint-medium) {
+        @media screen and (max-width: $container-width) {
             @content;
         }
     } @else if $size == "custom" and $width-type == "min" {
@@ -38,17 +38,20 @@
         background-color: $near-black;
         margin-top: 20px;
     }
-    @if ($position == center) {  //доделать цетнр
+    @if ($position == center) {
         &:after {
             margin: 20px auto 0;
         }
-        display: inline-block;
+    }
+    @include screen(large) {
+        &:after {
+            margin-top: 10px;
+        }
     }
 }
 
-// @mixin flex-position($direction,$justify,$align){
-//     display: flex;
-//     flex-direction: $direction;
-//     justify-content: $justify;
-//     align:$align;
-// }
+@mixin mix-text-shadow($shadow-color, $shadow-weight) {
+    text-shadow: $shadow-color $shadow-weight $shadow-weight 0, $shadow-color (-$shadow-weight) (-$shadow-weight) 0,
+        $shadow-color (-$shadow-weight) $shadow-weight 0, $shadow-color $shadow-weight (-$shadow-weight) 0;
+}
+

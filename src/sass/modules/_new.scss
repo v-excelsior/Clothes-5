@@ -1,35 +1,99 @@
-.new{ 
-    &__container{
+.new {
+    &__container {
+        margin-top: 100px;
+        @include screen(large) {
+            margin-top: 50px;
+        }
+    }
+    &__item {
         display: flex;
+        @include screen(large) {
+            justify-content: center;
+            text-align: center;
+        }
+        @include screen(medium) {
+            position: relative;
+            &:hover {
+                .new__item-card {
+                    filter: opacity(30%);
+                }
+                .new__item-about {
+                    visibility: visible;
+                }
+                .new__card-data {
+                    visibility: hidden;
+                }
+            }
+        }
     }
-    &__item-about{
-        flex:0 0 420px;
+    &__item-about {
+        width: 100%;
+        max-width: 420px;
+        @include screen(large) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 370px;
+        }
+        @include screen(medium) {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            visibility: hidden;
+        }
     }
-    &__heading{
-
+    &__heading {
         @include underline-decoration;
         margin: 100px 0 70px;
+        @include screen(large) {
+            text-align: center;
+            margin: 30px 0 15px;
+            &:after {
+                margin: 10px auto 0;
+            }
+        }
     }
-    &__text{
+    &__heading-desribe {
+        @include screen(large) {
+            margin-bottom: 15px;
+        }
+    }
+    &__text {
         font-family: Montserrat-SemiBold;
         font-size: 30px;
         margin-bottom: 50px;
+        @include screen(large) {
+            margin-bottom: 25px;
+        }
     }
-// ---
-    &__item-card{
-        flex:0 1 700px;
+    // ---
+    &__item-card {
+        flex: 0 1 700px;
         position: relative;
+        @include screen(large) {
+            max-width: 360px;
+        }
     }
-    &__card-img{
-        width:100%;
+    &__card-img {
+        width: 100%;
         max-width: 570px;
         object-fit: contain;
     }
-    &__card-data{
+    &__card-data {
         position: absolute;
+        padding: 10px;
+        background-color: white;
+        border: 1px solid black;
         max-width: 250px;
         right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        bottom: 50%;
+        transform: translateY(50%);
+        @include screen(large) {
+            right: 0;
+            bottom: 0;
+            transform: none;
+        }
     }
 }

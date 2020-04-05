@@ -4,6 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="lib/swiper.min.css"/>
     <title>Closes - 5</title>
   </head>
   <body>
@@ -36,24 +37,64 @@
         </div>
       </header>
       <section class="welcome">
-        <div class="container welcome__container"><span class="heading-desribe">extra 55% off in spring sale</span>
+        <div class="container welcome__container"><span class="heading-desribe welcome__heading-desribe">extra 55% off in spring sale</span>
           <h2 class="welcome__heading">Discover & Shop</h2>
           <h2 class="welcome__heading">The Trend Ss19</h2><a class="button button-black welcome__button" href="#">Shop now</a>
         </div>
       </section>
-      <section class="new">
-        <div class="container new__container">
-          <div class="new__item-about">
-            <h3 class="new__heading">New Collection</h3><span class="heading-desribe">item #35</span>
-            <p class="new__text">Available on store</p><a class="button button-trans new__button" href="#">Shop now</a>
+      <section class="new swiper-container">
+        <div class="container new__container swiper-wrapper">
+          <div class="new__item swiper-slide">
+            <div class="new__item-about">
+              <h3 class="new__heading">New Collection</h3><span class="heading-desribe new__heading-desribe">item #35</span>
+              <p class="new__text">Available on store</p><a class="button button-trans new__button" href="#">Shop now</a>
+            </div>
+            <div class="new__item-card"><img class="new__card-img" src="img/new/1.jpg"/>
+              <div class="new__card-data card-data"><span class="new__card-name card-data__name">T-short with OWL</span>
+                <div class="new__card-price card-data__price"><span class="card-data__price card-data__price_old">$75.00</span><span class="card-data__price card-data__price_new">$45.00</span></div>
+              </div>
+            </div>
           </div>
-          <div class="new__item-card"><img class="new__card-img" src="img/new/1.jpg"/>
-            <div class="new__card-data card-data"><span class="new__card-name card-data__name">T-short with OWL</span>
-              <div class="new__card-price card-data__price"><span class="card-data__price card-data__price_old">$75.00</span><span class="card-data__price card-data__price_new">$45.00</span></div>
+          <div class="new__item swiper-slide">
+            <div class="new__item-about">
+              <h3 class="new__heading">Old Collection</h3><span class="heading-desribe new__heading-desribe">item #35</span>
+              <p class="new__text">Available on store</p><a class="button button-trans new__button" href="#">Shop now</a>
+            </div>
+            <div class="new__item-card"><img class="new__card-img" src="img/new/2.jpg"/>
+              <div class="new__card-data card-data"><span class="new__card-name card-data__name">G-short with OWL</span>
+                <div class="new__card-price card-data__price"><span class="card-data__price card-data__price_old">$105.00</span><span class="card-data__price card-data__price_new">$65.00</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="new__item swiper-slide">
+            <div class="new__item-about">
+              <h3 class="new__heading">New Collection</h3><span class="heading-desribe new__heading-desribe">item #35</span>
+              <p class="new__text">Available on store</p><a class="button button-trans new__button" href="#">Shop now</a>
+            </div>
+            <div class="new__item-card"><img class="new__card-img" src="img/new/1.jpg"/>
+              <div class="new__card-data card-data"><span class="new__card-name card-data__name">T-short with OWL</span>
+                <div class="new__card-price card-data__price"><span class="card-data__price card-data__price_old">$75.00</span><span class="card-data__price card-data__price_new">$45.00</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="new__item swiper-slide">
+            <div class="new__item-about">
+              <h3 class="new__heading">Old Collection</h3><span class="heading-desribe new__heading-desribe">item #35</span>
+              <p class="new__text">Available on store</p><a class="button button-trans new__button" href="#">Shop now</a>
+            </div>
+            <div class="new__item-card"><img class="new__card-img" src="img/new/2.jpg"/>
+              <div class="new__card-data card-data"><span class="new__card-name card-data__name">G-short with OWL</span>
+                <div class="new__card-price card-data__price"><span class="card-data__price card-data__price_old">$105.00</span><span class="card-data__price card-data__price_new">$65.00</span></div>
+              </div>
             </div>
           </div>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </section>
     </div>
+    <script src="lib/swiper.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

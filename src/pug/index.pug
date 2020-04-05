@@ -4,6 +4,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet" href="css/main.css")
+        link(rel="stylesheet" href="lib/swiper.min.css")
         title Closes - 5
     body
         .page-wrapper
@@ -38,23 +39,68 @@ html(lang="en")
                                         use(xlink:href="img/footer-right.svg#shopping-bag")
             section.welcome
                 div(class='container welcome__container')
-                    span.heading-desribe extra 55% off in spring sale
+                    span.heading-desribe.welcome__heading-desribe extra 55% off in spring sale
                     h2.welcome__heading Discover & Shop
                     h2.welcome__heading The Trend Ss19
                     a(class="button button-black welcome__button" href="#") Shop now
-            
-            section.new
-                .container.new__container
-                    .new__item-about
-                        h3.new__heading New Collection
-                        span.heading-desribe item #35
-                        p.new__text Available on store
-                        a(class="button button-trans new__button" href="#") Shop now
-                    .new__item-card
-                        img.new__card-img(src="img/new/1.jpg")
-                        .new__card-data.card-data
-                            span.new__card-name.card-data__name T-short with OWL
-                            .new__card-price.card-data__price
-                                span.card-data__price.card-data__price_old $75.00
-                                span.card-data__price.card-data__price_new $45.00
 
+            section.new.swiper-container
+                .container.new__container.swiper-wrapper
+                    .new__item.swiper-slide
+                        .new__item-about
+                            h3.new__heading New Collection
+                            span.heading-desribe.new__heading-desribe item #35
+                            p.new__text Available on store
+                            a(class="button button-trans new__button" href="#") Shop now
+                        .new__item-card
+                            img.new__card-img(src="img/new/1.jpg")
+                            .new__card-data.card-data
+                                span.new__card-name.card-data__name T-short with OWL
+                                .new__card-price.card-data__price
+                                    span.card-data__price.card-data__price_old $75.00
+                                    span.card-data__price.card-data__price_new $45.00
+                    .new__item.swiper-slide
+                        .new__item-about
+                            h3.new__heading Old Collection
+                            span.heading-desribe.new__heading-desribe item #35
+                            p.new__text Available on store
+                            a(class="button button-trans new__button" href="#") Shop now
+                        .new__item-card
+                            img.new__card-img(src="img/new/2.jpg")
+                            .new__card-data.card-data
+                                span.new__card-name.card-data__name G-short with OWL
+                                .new__card-price.card-data__price
+                                    span.card-data__price.card-data__price_old $105.00
+                                    span.card-data__price.card-data__price_new $65.00
+                    .new__item.swiper-slide
+                        .new__item-about
+                            h3.new__heading New Collection
+                            span.heading-desribe.new__heading-desribe item #35
+                            p.new__text Available on store
+                            a(class="button button-trans new__button" href="#") Shop now
+                        .new__item-card
+                            img.new__card-img(src="img/new/1.jpg")
+                            .new__card-data.card-data
+                                span.new__card-name.card-data__name T-short with OWL
+                                .new__card-price.card-data__price
+                                    span.card-data__price.card-data__price_old $75.00
+                                    span.card-data__price.card-data__price_new $45.00
+                    .new__item.swiper-slide
+                        .new__item-about
+                            h3.new__heading Old Collection
+                            span.heading-desribe.new__heading-desribe item #35
+                            p.new__text Available on store
+                            a(class="button button-trans new__button" href="#") Shop now
+                        .new__item-card
+                            img.new__card-img(src="img/new/2.jpg")
+                            .new__card-data.card-data
+                                span.new__card-name.card-data__name G-short with OWL
+                                .new__card-price.card-data__price
+                                    span.card-data__price.card-data__price_old $105.00
+                                    span.card-data__price.card-data__price_new $65.00
+                .swiper-pagination
+                .swiper-button-prev
+                .swiper-button-next
+
+        script(src="lib/swiper.min.js")
+        script(src="js/script.js")

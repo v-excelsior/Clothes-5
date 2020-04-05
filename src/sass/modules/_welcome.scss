@@ -7,23 +7,21 @@
         justify-content: center;
         align-items: start;
     }
+    &__heading-desribe{
+        margin-right: 70px;
+    }
     &__heading {
-        text-shadow: #ececec 1px 1px 0, #ececec -1px -1px 0, #ececec -1px 1px 0, #ececec 1px -1px 0;
+        @include mix-text-shadow(#ececec, 1px);
     }
     &__button {
         margin-top: 50px;
     }
     @include screen(medium) {
-        &__heading {
-            font-size: 30px;
+        &__container {
+            min-height: 400px;
         }
         &__button {
             margin-top: 20px;
-        }
-    }
-    @include screen(medium) {
-        &__container {
-            min-height: 400px;
         }
     }
 }
