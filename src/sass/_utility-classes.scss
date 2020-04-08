@@ -1,69 +1,93 @@
 @import "vars";
-.container{
-    width:100%;
+.container {
+    width: 100%;
     max-width: $container-width;
     padding: 0 10px;
     margin: 0 auto;
 }
 
-.link-active{
-    &:after{
+.link-active {
+    &:after {
         display: block;
-        content:'';
-        height:2px;
-        width:100%;
+        content: "";
+        height: 2px;
+        width: 100%;
         background-color: $near-black;
     }
 }
 
-.heading-desribe{
+.heading-desribe {
     display: inline-block;
     font-family: Montserrat-SemiBold;
     font-size: 15px;
-    margin-bottom:30px;
+    margin-bottom: 30px;
     color: $gray;
     text-transform: uppercase;
-    @include screen(medium){
-        margin-bottom:15px;
+    @include screen(medium) {
+        margin-bottom: 15px;
     }
 }
-.card-data{
+.card-data {
     display: flex;
     flex-direction: column;
-    font-size:16px;
-    &__name{
+    font-size: 16px;
+    &__name {
         font-family: Montserrat-SemiBold;
         margin-bottom: 10px;
     }
-    &__price{
-        &_old{
-            color:$gray;
+    &__price {
+        &_old {
+            color: $gray;
             text-decoration: line-through;
-            margin-right:10px;
+            margin-right: 10px;
             font-size: 14px;
         }
     }
 }
-.button{
+
+.button {
     display: inline-block;
     font-family: Montserrat-Medium;
-    font-size:14px;
+    font-size: 14px;
     text-transform: uppercase;
     padding: 20px 45px;
-    &-white{
+    &-white {
         background-color: white;
         color: $near-black;
+        border: 2px solid white;
+        &:hover {
+            background-color: $near-black;
+            color: white;
+            border: 2px solid $near-black;
+        }
     }
-    &-black{
+    &-black {
         background-color: $near-black;
         color: white;
+        border: 2px solid $near-black;
+        &:hover {
+            background-color: transparent;
+            color: $near-black;
+            border: 2px solid $near-black;
+        }
     }
-    &-trans{
+    &-trans {
         color: $near-black;
         border: 2px solid $near-black;
+        &:hover {
+            background-color: $near-black;
+            color: white;
+            border: 2px solid $near-black;
+        }
     }
-    @include screen(medium){
-        font-size:12px;
+    @include screen(medium) {
+        font-size: 12px;
         padding: 10px 20px;
+    }
+}
+div.swiper-button-prev,
+div.swiper-button-next {
+    @include screen(small) {
+        display: none;
     }
 }

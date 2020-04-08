@@ -85,7 +85,7 @@ h5 {
 
 .link-active:after {
   display: block;
-  content: '';
+  content: "";
   height: 2px;
   width: 100%;
   background-color: #171717; }
@@ -122,17 +122,36 @@ h5 {
   padding: 20px 45px; }
   .button-white {
     background-color: white;
-    color: #171717; }
+    color: #171717;
+    border: 2px solid white; }
+    .button-white:hover {
+      background-color: #171717;
+      color: white;
+      border: 2px solid #171717; }
   .button-black {
     background-color: #171717;
-    color: white; }
+    color: white;
+    border: 2px solid #171717; }
+    .button-black:hover {
+      background-color: transparent;
+      color: #171717;
+      border: 2px solid #171717; }
   .button-trans {
     color: #171717;
     border: 2px solid #171717; }
+    .button-trans:hover {
+      background-color: #171717;
+      color: white;
+      border: 2px solid #171717; }
   @media screen and (max-width: 767px) {
     .button {
       font-size: 12px;
       padding: 10px 20px; } }
+
+@media screen and (max-width: 480px) {
+  div.swiper-button-prev,
+  div.swiper-button-next {
+    display: none; } }
 
 .header {
   position: sticky;
@@ -156,7 +175,20 @@ h5 {
     flex-wrap: wrap;
     justify-content: space-evenly; }
     .header__sections-item {
-      margin: 0 20px; }
+      margin: 0 20px;
+      transition: 0.3s; }
+      .header__sections-item:hover {
+        color: #999999; }
+        .header__sections-item:hover :after {
+          display: block;
+          content: "";
+          height: 2px;
+          width: 100%;
+          background-color: #999999;
+          transition: all 0.3s;
+          transform: scaleX(0);
+          animation: example forwards;
+          animation-duration: 0.5s; }
   .header__right-item {
     margin: 0 15px; }
   .header-icon {
@@ -175,6 +207,14 @@ h5 {
   @media screen and (max-width: 1170px) {
     .header__sections {
       display: none; } }
+
+@keyframes example {
+  from {
+    transform-origin: left;
+    transform: scaleX(0); }
+  to {
+    transform-origin: left;
+    transform: scaleX(1); } }
 
 .welcome {
   background: url(/img/welcome-bg.jpg) no-repeat center top/cover; }
@@ -197,13 +237,15 @@ h5 {
       margin-top: 20px; } }
 
 .new__container {
-  margin-top: 100px; }
+  margin-top: 100px;
+  padding: 0; }
   @media screen and (max-width: 1170px) {
     .new__container {
       margin-top: 50px; } }
 
 .new__item {
-  display: flex; }
+  display: flex;
+  padding: 0 70px; }
   @media screen and (max-width: 1170px) {
     .new__item {
       justify-content: center;
@@ -259,6 +301,10 @@ h5 {
   .new__heading-desribe {
     margin-bottom: 15px; } }
 
+@media screen and (max-width: 767px) {
+  .new__heading-desribe {
+    color: #171717; } }
+
 .new__text {
   font-family: Montserrat-SemiBold;
   font-size: 30px;
@@ -286,10 +332,12 @@ h5 {
   border: 1px solid black;
   max-width: 250px;
   right: 0;
-  bottom: 50%;
-  transform: translateY(50%); }
+  bottom: 30%; }
   @media screen and (max-width: 1170px) {
     .new__card-data {
       right: 0;
       bottom: 0;
       transform: none; } }
+
+.swiper-pagination-bullet-active {
+  background-color: black; }

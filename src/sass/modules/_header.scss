@@ -1,10 +1,10 @@
 .header {
     position: sticky;
-    top:0;
-    left:0;
-    width:100%;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: white;
-    box-shadow: 0px 5px 10px 5px rgba(255,255,255,1);
+    box-shadow: 0px 5px 10px 5px rgba(255, 255, 255, 1);
     font-family: "Montserrat-SemiBold";
     &__nav {
         display: flex;
@@ -24,6 +24,21 @@
         justify-content: space-evenly;
         &-item {
             margin: 0 20px;
+            transition: 0.3s;
+            &:hover {
+                color: $gray;
+                :after {
+                    display: block;
+                    content: "";
+                    height: 2px;
+                    width: 100%;
+                    background-color: $gray;
+                    transition: all 0.3s;
+                    transform: scaleX(0);
+                    animation: example forwards;
+                    animation-duration: 0.5s;
+                }
+            }
         }
     }
     &__right {
@@ -56,3 +71,14 @@
     }
 }
 
+@keyframes example {
+    from {
+        transform-origin: left;
+        transform: scaleX(0);
+        
+    }
+    to {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+}

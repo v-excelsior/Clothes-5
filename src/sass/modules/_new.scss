@@ -1,12 +1,14 @@
 .new {
     &__container {
         margin-top: 100px;
+        padding: 0;
         @include screen(large) {
             margin-top: 50px;
         }
     }
     &__item {
         display: flex;
+        padding:0 70px;
         @include screen(large) {
             justify-content: center;
             text-align: center;
@@ -59,6 +61,9 @@
         @include screen(large) {
             margin-bottom: 15px;
         }
+        @include screen(medium) {
+            color: $near-black;
+        }
     }
     &__text {
         font-family: Montserrat-SemiBold;
@@ -88,12 +93,15 @@
         border: 1px solid black;
         max-width: 250px;
         right: 0;
-        bottom: 50%;
-        transform: translateY(50%);
+        bottom: 30%;
         @include screen(large) {
             right: 0;
             bottom: 0;
             transform: none;
         }
     }
+}
+
+.swiper-pagination-bullet-active{
+    background-color:black;
 }
