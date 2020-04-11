@@ -25,7 +25,7 @@ h5 {
     letter-spacing: 3px;
 }
 h1 {
-    font-size: 50px;
+    font-size: 100px;
 }
 h2 {
     font-size: 60px;
@@ -34,14 +34,14 @@ h3 {
     font-size: 40px;
 }
 h4 {
-    font-size: 24px; //change
+    font-size: 24px;
 }
 h5 {
-    font-size: 18px; //change
+    font-size: 18px;
 }
 @include screen(medium) {
     h1 {
-        font-size: 40px;
+        font-size: 35px;
     }
     h2 {
         font-size: 30px;
@@ -50,9 +50,26 @@ h5 {
         font-size: 24px;
     }
     h4 {
-        font-size: 20px; //change
+        font-size: 20px;
     }
     h5 {
-        font-size: 16px; //change
+        font-size: 16px;
+    }
+}
+@include screen(small) {
+    h1 {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 21px;
+    }
+    h3 {
+        font-size: 17px;
+    }
+    h4 {
+        font-size: 14px;
+    }
+    h5 {
+        font-size: 12px;
     }
 }

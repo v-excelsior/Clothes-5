@@ -8,7 +8,7 @@
     }
     &__item {
         display: flex;
-        padding:0 70px;
+        padding: 0 70px;
         @include screen(large) {
             justify-content: center;
             text-align: center;
@@ -26,6 +26,9 @@
                     visibility: hidden;
                 }
             }
+        }
+        @include screen(small) {
+            padding: 0 20px;
         }
     }
     &__item-about {
@@ -72,6 +75,9 @@
         @include screen(large) {
             margin-bottom: 25px;
         }
+        @include screen(medium) {
+            font-size: 20px;
+        }
     }
     // ---
     &__item-card {
@@ -100,8 +106,18 @@
             transform: none;
         }
     }
+    &__card-name {
+        @include screen(small) {
+            font-size:12px;
+        }
+    }
+    &__card-price {
+        @include screen(small) {
+            font-size:12px;
+        }
+    }
 }
 
-.swiper-pagination-bullet-active{
-    background-color:black;
+.swiper-pagination-bullet-active {
+    background-color: black;
 }

@@ -10,33 +10,36 @@ html(lang="en")
         .page-wrapper
             header.header
                 div(class='container header__container')
-                    nav.header__nav
-                        a(href="#")
-                            span.header__logo Mon'sa
-                        ul(class='header__list header__sections')
+                    a.header__link-logo(href="#")
+                        span.header__logo Mon'sa
+                    nav.header__nav.header__nav-sections
+                        ul(class='header__sections')
                             li.header__sections-item
-                                a.link-active(href="#") Home
+                                a.link-active.header__link(href="#") Home
                             li.header__sections-item
-                                a(href="#") Shop
+                                a.header__link(href="#") Shop
                             li.header__sections-item
-                                a(href="#") Pages
+                                a.header__link(href="#") Pages
                             li.header__sections-item
-                                a(href="#") Blog
+                                a.header__link(href="#") Blog
                             li.header__sections-item
-                                a(href="#") Lookbook
-                        ul(class='header__list header__right')
+                                a.header__link(href="#") Lookbook
+                    nav.header__nav.header__nav-right
+                        ul(class='header__right')
                             li.header__right-item
-                                a(href="#") 
+                                a.header__link(href="#") 
                                     svg.header-icon
                                         use(xlink:href="img/footer-right.svg#account")
                             li.header__right-item
-                                a(href="#") 
+                                a.header__link(href="#") 
                                     svg.header-icon
                                         use(xlink:href="img/footer-right.svg#search")
                             li.header__right-item
-                                a(href="#") 
+                                a.header__link(href="#") 
                                     svg.header-icon
                                         use(xlink:href="img/footer-right.svg#shopping-bag")
+                    .header__drag-btn
+                        .triangle
             section.welcome
                 div(class='container welcome__container')
                     span.heading-desribe.welcome__heading-desribe extra 55% off in spring sale

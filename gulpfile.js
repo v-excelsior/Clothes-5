@@ -59,7 +59,8 @@ gulp.task(
 gulp.task('watchAll', function () {
     browserSync.init({
         server: {
-            baseDir: "./dist"
+            baseDir: "./dist",
+            notify: false
         }
     });
     gulp.watch('./src/sass/**/*.scss', gulp.series('sass'));

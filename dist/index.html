@@ -10,30 +10,35 @@
   <body>
     <div class="page-wrapper">
       <header class="header">
-        <div class="container header__container">
-          <nav class="header__nav"><a href="#"><span class="header__logo">Mon'sa</span></a>
-            <ul class="header__list header__sections">
-              <li class="header__sections-item"><a class="link-active" href="#">Home</a></li>
-              <li class="header__sections-item"><a href="#">Shop</a></li>
-              <li class="header__sections-item"><a href="#">Pages</a></li>
-              <li class="header__sections-item"><a href="#">Blog</a></li>
-              <li class="header__sections-item"><a href="#">Lookbook</a></li>
+        <div class="container header__container"><a class="header__link-logo" href="#"><span class="header__logo">Mon'sa</span></a>
+          <nav class="header__nav header__nav-sections">
+            <ul class="header__sections">
+              <li class="header__sections-item"><a class="link-active header__link" href="#">Home</a></li>
+              <li class="header__sections-item"><a class="header__link" href="#">Shop</a></li>
+              <li class="header__sections-item"><a class="header__link" href="#">Pages</a></li>
+              <li class="header__sections-item"><a class="header__link" href="#">Blog</a></li>
+              <li class="header__sections-item"><a class="header__link" href="#">Lookbook</a></li>
             </ul>
-            <ul class="header__list header__right">
-              <li class="header__right-item"><a href="#"> 
+          </nav>
+          <nav class="header__nav header__nav-right">
+            <ul class="header__right">
+              <li class="header__right-item"><a class="header__link" href="#"> 
                   <svg class="header-icon">
                     <use xlink:href="img/footer-right.svg#account"></use>
                   </svg></a></li>
-              <li class="header__right-item"><a href="#"> 
+              <li class="header__right-item"><a class="header__link" href="#"> 
                   <svg class="header-icon">
                     <use xlink:href="img/footer-right.svg#search"></use>
                   </svg></a></li>
-              <li class="header__right-item"><a href="#"> 
+              <li class="header__right-item"><a class="header__link" href="#"> 
                   <svg class="header-icon">
                     <use xlink:href="img/footer-right.svg#shopping-bag"></use>
                   </svg></a></li>
             </ul>
           </nav>
+          <div class="header__drag-btn">
+            <div class="triangle"></div>
+          </div>
         </div>
       </header>
       <section class="welcome">
