@@ -1,8 +1,9 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
-var pug = require('gulp-pug');
-var del = require("del");
+let gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    browserSync = require('browser-sync').create(),
+    pug = require('gulp-pug'),
+    del = require("del"),
+    svgSprite = require('gulp-svg-sprite');
 
 gulp.task('sass', function () {
     return gulp.src('./src/sass/*.scss')
@@ -31,6 +32,43 @@ gulp.task("img", () => {
     return gulp.src("src/img/**/*.*")
         .pipe(gulp.dest("dist/img"));
 });
+
+gulp.task('svgToSprite', () => {
+    let config = {
+        log: "verbose",
+        shape: {
+          id: {
+            separator: "--"
+          },
+          transform: [
+            {
+              svgo: {
+                plugins: [
+                  {
+                    cleanupListOfValues: {
+                      floatPrecision: 0
+                    }
+                  },
+                  { removeXMLNS: true },
+                  { removeTitle: false }
+                ]
+              }
+            }
+          ]
+        },
+        mode: {
+          symbol: {
+            dest: ".",
+            sprite: "sprite.svg"
+          }
+        }
+      };
+    return gulp.src('src/img/**/*.svg')
+        .pipe(svgSprite(config))
+        .pipe(gulp.dest('dist/img'));
+})
+
+
 
 gulp.task("fonts", () => {
     return gulp.src("src/fonts/**/*.*")
