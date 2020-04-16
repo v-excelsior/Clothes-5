@@ -30,6 +30,7 @@
         @include screen(small) {
             padding: 0 20px;
         }
+    }
     &__item-about {
         width: 100%;
         max-width: 420px;
@@ -78,7 +79,6 @@
             font-size: 20px;
         }
     }
-    // ---
     &__item-card {
         flex: 0 1 700px;
         position: relative;

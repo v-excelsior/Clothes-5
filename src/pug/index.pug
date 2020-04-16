@@ -24,22 +24,23 @@ html(lang="en")
                                 a.header__link(href="#") Blog
                             li.header__sections-item
                                 a.header__link(href="#") Lookbook
+                        .header__drag-container
+                            svg.header__drag-btn 
+                                use(xlink:href="img/sprite.svg#icons-arrow-down")
                     nav.header__nav.header__nav-right
                         ul(class='header__right')
                             li.header__right-item
                                 a.header__link(href="#") 
-                                    svg.header-icon
+                                    svg.header-icon.icon
                                         use(xlink:href="img/sprite.svg#icons-account")
                             li.header__right-item
                                 a.header__link(href="#") 
-                                    svg.header-icon
+                                    svg.header-icon.icon
                                         use(xlink:href="img/sprite.svg#icons-search")
                             li.header__right-item
                                 a.header__link(href="#") 
-                                    svg.header-icon
+                                    svg.header-icon.icon
                                         use(xlink:href="img/sprite.svg#icons-shopping-bag")
-                    .header__drag-btn
-                        .triangle
             section.welcome
                 div(class='container welcome__container')
                     span.heading-desribe.welcome__heading-desribe extra 55% off in spring sale
