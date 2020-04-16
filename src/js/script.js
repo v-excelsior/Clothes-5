@@ -140,9 +140,16 @@ dragBtn.addEventListener('touchstart', function (e) {
         menu.ontransitionend = () => {
             menu.removeAttribute('style');
         }
+        setTimeout(() => { menu.removeAttribute('style');},300) // prevent single click without move
     };
 });
 
-dragBtn.ondragstart = function () {
-    return false;
-};
+dragBtn.addEventListener('click', menuVisibilityHandler)
+
+function menuVisibilityHandler(e){
+    if (menu.classList.contains('active')){
+        menu.classList.remove('active')
+    } else {
+        menu.classList.add('active');
+    }
+}
