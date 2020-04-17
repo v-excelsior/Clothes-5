@@ -42,7 +42,7 @@ a.link-active {
     }
 }
 .icon {
-    width:100%;
+    width: 100%;
     height: 100%;
     transition: 0.3s;
     &:hover {
@@ -56,6 +56,7 @@ a.link-active {
     font-size: 14px;
     text-transform: uppercase;
     padding: 20px 45px;
+    transition: background-color 0.3s, color 0.3s;
     &-white {
         background-color: white;
         color: $near-black;

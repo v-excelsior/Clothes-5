@@ -50,48 +50,16 @@
         </div>
       </section>
       <section class="new swiper-container">
-        <div class="container new__container swiper-wrapper">
-          <div class="new__item swiper-slide">
+        <div class="container new__container swiper-wrapper" id="slide">
+          <div class="new__item swiper-slide" v-for="item in items">
             <div class="new__item-about">
-              <h3 class="new__heading">New Collection</h3><span class="heading-desribe new__heading-desribe">item #35</span>
-              <p class="new__text">Available on store</p><a class="button button-trans new__button" href="#">Shop now</a>
+              <h3 class="new__heading">{{item.collection + " collection"}}</h3><span class="heading-desribe new__heading-desribe">{{"item #" + item.id}}</span>
+              <p class="new__text" v-if="item.isAvailable">Available on store</p>
+              <p class="new__text" v-else="v-else">Not available now</p><a class="button button-trans new__button" v-if="item.isAvailable" href="#">Shop now</a>
             </div>
-            <div class="new__item-card"><img class="new__card-img" src="img/new/1.jpg"/>
-              <div class="new__card-data card-data"><span class="new__card-name card-data__name">T-short with OWL</span>
-                <div class="new__card-price card-data__price"><span class="card-data__price card-data__price_old">$75.00</span><span class="card-data__price card-data__price_new">$45.00</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="new__item swiper-slide">
-            <div class="new__item-about">
-              <h3 class="new__heading">Old Collection</h3><span class="heading-desribe new__heading-desribe">item #35</span>
-              <p class="new__text">Available on store</p><a class="button button-trans new__button" href="#">Shop now</a>
-            </div>
-            <div class="new__item-card"><img class="new__card-img" src="img/new/2.jpg"/>
-              <div class="new__card-data card-data"><span class="new__card-name card-data__name">G-short with OWL</span>
-                <div class="new__card-price card-data__price"><span class="card-data__price card-data__price_old">$105.00</span><span class="card-data__price card-data__price_new">$65.00</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="new__item swiper-slide">
-            <div class="new__item-about">
-              <h3 class="new__heading">New Collection</h3><span class="heading-desribe new__heading-desribe">item #35</span>
-              <p class="new__text">Available on store</p><a class="button button-trans new__button" href="#">Shop now</a>
-            </div>
-            <div class="new__item-card"><img class="new__card-img" src="img/new/1.jpg"/>
-              <div class="new__card-data card-data"><span class="new__card-name card-data__name">T-short with OWL</span>
-                <div class="new__card-price card-data__price"><span class="card-data__price card-data__price_old">$75.00</span><span class="card-data__price card-data__price_new">$45.00</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="new__item swiper-slide">
-            <div class="new__item-about">
-              <h3 class="new__heading">Old Collection</h3><span class="heading-desribe new__heading-desribe">item #35</span>
-              <p class="new__text">Available on store</p><a class="button button-trans new__button" href="#">Shop now</a>
-            </div>
-            <div class="new__item-card"><img class="new__card-img" src="img/new/2.jpg"/>
-              <div class="new__card-data card-data"><span class="new__card-name card-data__name">G-short with OWL</span>
-                <div class="new__card-price card-data__price"><span class="card-data__price card-data__price_old">$105.00</span><span class="card-data__price card-data__price_new">$65.00</span></div>
+            <div class="new__item-card"><img class="new__card-img" v-bind:src="item.imgSrc"/>
+              <div class="new__card-data card-data"><span class="new__card-name card-data__name">{{item.name}}</span>
+                <div class="new__card-price card-data__price"><span class="card-data__price card-data__price_old" v-if="item.onSale">{{"$" + item.oldPrice}}</span><span class="card-data__price card-data__price_new">{{"$" + item.price}}</span></div>
               </div>
             </div>
           </div>
@@ -101,6 +69,7 @@
         <div class="swiper-button-next"></div>
       </section>
     </div>
+    <script src="lib/vue.js"></script>
     <script src="lib/swiper.min.js"></script>
     <script src="js/script.js"></script>
   </body>

@@ -28,7 +28,7 @@ gulp.task("clean", () => {
 });
 
 gulp.task("img", () => {
-    return gulp.src("src/img/**/*.*")
+    return gulp.src("src/img/**/*.jpg","src/img/**/*.png")
         .pipe(gulp.dest("dist/img"));
 });
 
@@ -76,6 +76,10 @@ gulp.task("lib", () => {
     return gulp.src("src/lib/**/*.*")
         .pipe(gulp.dest("dist/lib"));
 });
+gulp.task("lib", () => {
+    return gulp.src("src/lib/**/*.*")
+        .pipe(gulp.dest("dist/lib"));
+});
 
 
 gulp.task(
@@ -87,7 +91,9 @@ gulp.task(
             "pug",
             "img",
             "fonts",
-            "lib"
+            "lib",
+            "js",
+            "svgToSprite"
         )
     )
 );

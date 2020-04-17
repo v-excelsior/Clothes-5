@@ -9,11 +9,11 @@ html(lang="en")
     body
         .page-wrapper
             header.header
-                div(class='container header__container')
+                .container.header__container
                     a.header__link-logo(href="#")
                         span.header__logo Mon'sa
                     nav.header__nav.header__nav-sections
-                        ul(class='header__sections')
+                        ul.header__sections
                             li.header__sections-item
                                 a.link-active.header__link(href="#") Home
                             li.header__sections-item
@@ -28,83 +28,45 @@ html(lang="en")
                             svg.header__drag-btn 
                                 use(xlink:href="img/sprite.svg#icons-arrow-down")
                     nav.header__nav.header__nav-right
-                        ul(class='header__right')
+                        ul.header__right
                             li.header__right-item
                                 a.header__link(href="#") 
                                     svg.header-icon.icon
                                         use(xlink:href="img/sprite.svg#icons-account")
                             li.header__right-item
                                 a.header__link(href="#") 
-                                    svg.header-icon.icong
+                                    svg.header-icon.icon
                                         use(xlink:href="img/sprite.svg#icons-search")
                             li.header__right-item
                                 a.header__link(href="#") 
                                     svg.header-icon.icon
                                         use(xlink:href="img/sprite.svg#icons-shopping-bag")
             section.welcome
-                div(class='container welcome__container')
+                .container.welcome__container
                     span.heading-desribe.welcome__heading-desribe extra 55% off in spring sale
                     h2.welcome__heading Discover & Shop
                     h2.welcome__heading The Trend Ss19
-                    a(class="button button-black welcome__button" href="#") Shop now
+                    a.button.button-black.welcome__button(href="#") Shop now
 
             section.new.swiper-container
-                .container.new__container.swiper-wrapper
-                    .new__item.swiper-slide
+                .container.new__container.swiper-wrapper#slide
+                    .new__item.swiper-slide(v-for="item in items")
                         .new__item-about
-                            h3.new__heading New Collection
-                            span.heading-desribe.new__heading-desribe item #35
-                            p.new__text Available on store
-                            a(class="button button-trans new__button" href="#") Shop now
+                            h3.new__heading {{item.collection + " collection"}}
+                            span.heading-desribe.new__heading-desribe {{"item #" + item.id}}
+                            p.new__text(v-if="item.isAvailable") Available on store
+                            p.new__text(v-else) Not available now
+                            a.button.button-trans.new__button(v-if="item.isAvailable" href="#") Shop now
                         .new__item-card
-                            img.new__card-img(src="img/new/1.jpg")
+                            img.new__card-img(v-bind:src="item.imgSrc")
                             .new__card-data.card-data
-                                span.new__card-name.card-data__name T-short with OWL
+                                span.new__card-name.card-data__name {{item.name}}
                                 .new__card-price.card-data__price
-                                    span.card-data__price.card-data__price_old $75.00
-                                    span.card-data__price.card-data__price_new $45.00
-                    .new__item.swiper-slide
-                        .new__item-about
-                            h3.new__heading Old Collection
-                            span.heading-desribe.new__heading-desribe item #35
-                            p.new__text Available on store
-                            a(class="button button-trans new__button" href="#") Shop now
-                        .new__item-card
-                            img.new__card-img(src="img/new/2.jpg")
-                            .new__card-data.card-data
-                                span.new__card-name.card-data__name G-short with OWL
-                                .new__card-price.card-data__price
-                                    span.card-data__price.card-data__price_old $105.00
-                                    span.card-data__price.card-data__price_new $65.00
-                    .new__item.swiper-slide
-                        .new__item-about
-                            h3.new__heading New Collection
-                            span.heading-desribe.new__heading-desribe item #35
-                            p.new__text Available on store
-                            a(class="button button-trans new__button" href="#") Shop now
-                        .new__item-card
-                            img.new__card-img(src="img/new/1.jpg")
-                            .new__card-data.card-data
-                                span.new__card-name.card-data__name T-short with OWL
-                                .new__card-price.card-data__price
-                                    span.card-data__price.card-data__price_old $75.00
-                                    span.card-data__price.card-data__price_new $45.00
-                    .new__item.swiper-slide
-                        .new__item-about
-                            h3.new__heading Old Collection
-                            span.heading-desribe.new__heading-desribe item #35
-                            p.new__text Available on store
-                            a(class="button button-trans new__button" href="#") Shop now
-                        .new__item-card
-                            img.new__card-img(src="img/new/2.jpg")
-                            .new__card-data.card-data
-                                span.new__card-name.card-data__name G-short with OWL
-                                .new__card-price.card-data__price
-                                    span.card-data__price.card-data__price_old $105.00
-                                    span.card-data__price.card-data__price_new $65.00
+                                    span.card-data__price.card-data__price_old(v-if="item.onSale") {{"$" + item.oldPrice}}
+                                    span.card-data__price.card-data__price_new {{"$" + item.price}}
                 .swiper-pagination
                 .swiper-button-prev
                 .swiper-button-next
-
+        script(src="lib/vue.js")
         script(src="lib/swiper.min.js")
         script(src="js/script.js")
