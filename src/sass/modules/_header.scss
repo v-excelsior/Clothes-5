@@ -32,11 +32,12 @@
             justify-content: flex-end;
             box-shadow: 0px 5px 10px 5px rgba(255, 255, 255, 1);
         }
+        @include screen(large) {
+            transition: 0.3s;
+        }
         @include screen(medium) {
             top: -280px;
-        }
-        @include screen(large) {
-        transition: 0.3s;
+            transition: none;
         }
     }
     &__sections {
